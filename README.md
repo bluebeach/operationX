@@ -23,5 +23,5 @@
 
 
 *参考：*
-[并发服务器模型：单客户端单线程，统一accept](http://blog.chinaunix.net/uid-8196371-id-1676942.html)
-[用C实现的聊天程序](http://blog.csdn.net/zx824/article/details/7752894)
+
+[《APUE》]()、[并发服务器模型：单客户端单线程，统一accept](http://blog.chinaunix.net/uid-8196371-id-1676942.html)、[用C实现的聊天程序](http://blog.csdn.net/zx824/article/details/7752894)
