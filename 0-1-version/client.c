@@ -79,8 +79,9 @@ int main(int argc, char *argv[]) {
 						break;            
 				}
 		}
+		while(1){
 
-		close(connect_socket);
+		}
 		return 0;
 }
 

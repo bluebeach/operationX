@@ -11,5 +11,15 @@
 
 ###v0.2:
 比较服务器多线程和多进程方案，实现双方可以一边发送一边接受消息。
+问题：
+####ISSUE:
+在client端输入quit后，写线程结束，关闭了socket，但是读线程依然没有关闭。必须在接收一次server端的send后，因为socket已关，导致len<0，然后才能退出。
+####原因：
+当server输入quit时，client的读线程是主线程，主线程会break导致整个程序退出，于是client的socket关闭。当client输入quit时，server的读线程退出，紧接着的while循环并不退出。所以server的socket并没有关闭。
+####解决办法：
+只要在server的handle_read方法里，break前close掉socket即可。
 
 
+*参考：*
+(并发服务器模型：单客户端单线程，统一accept)[http://blog.chinaunix.net/uid-8196371-id-1676942.html]
+(用C实现的聊天程序)[http://blog.csdn.net/zx824/article/details/7752894]

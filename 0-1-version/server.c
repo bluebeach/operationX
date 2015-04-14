@@ -86,6 +86,7 @@ int main(int argc, char **argv) {
 						}
 				}
 				close(accept_socket);
+				printf("-----------------\n");
 				printf("是否退出程序：y/n?");
 				memset(buf, 0, BUFLEN);
 				fgets(buf, BUFLEN, stdin);
