@@ -19,6 +19,8 @@
 ####解决办法：
 只要在server的handle_read方法里，break前close掉socket即可。
 
+*另外：发现了vim的一个插件accelerated-smooth-scroll，可以实现vim翻页时候的滚动效果，并非瞬间展示。用法，先make，然后在~/.vim目录下解压对应的zip即可。*
+
 
 *参考：*
 (并发服务器模型：单客户端单线程，统一accept)[http://blog.chinaunix.net/uid-8196371-id-1676942.html]
